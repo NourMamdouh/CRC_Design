@@ -1,14 +1,14 @@
 module CRC #(
-parameter 	[3:0]					crc_bits='d8, //up to 15 bits crc
-parameter 	[crc_bits-1:0]	 	poly='b1100_0100 , // 1+ x^(1)+x^(5) --> in general, starting from order zero on the left to the highest on the right
-parameter 	[1:0]					data_bytes='d1) // up to 4 bytes	
+parameter 	[3:0]				crc_bits='d8, //up to 15 bits crc
+parameter 	[crc_bits-1:0]	 		poly='b1100_0100 , // 1+ x^(1)+x^(5) --> in general, starting from order zero on the left to the highest on the right
+parameter 	[1:0]				data_bytes='d1) // up to 4 bytes	
 (
-input			wire					CLK,
-input 		wire					RST,
-input 		wire					ACTIVE,
-input 		wire					DATA,
-output 		reg 					Valid,
-output		reg					CRC
+input		wire				CLK,
+input 		wire				RST,
+input 		wire				ACTIVE,
+input 		wire				DATA,
+output 		reg 				Valid,
+output		reg				CRC
  );
 	 
 	 //parameters
